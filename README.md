@@ -6,7 +6,7 @@
 - chiedo di inserire il numero di km da percorrere
     - seleziono l'elemento input tramite ID
     - recupero il valore presente nell'input e lo salvo in una variabile
-    
+- chiedo di inserire la fascia di età
 - calcolare il prezzo il prezzo totale del viaggio
     - calcolare prezzo base (0.21 € al km)
         - moltiplicare il prezzo al km per i km da percorrere

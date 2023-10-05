@@ -15,18 +15,25 @@ console.log(km);
 const btnDOMElement = document.getElementById('btn-calc');
 console.log(btnDOMElement);
 
+// - chiedo di scegliere la fascia di età
+const selDOMElement = document.getElementById('discount')
 let etaUser;
-// etaUser = prompt('inserire età');
-// console.log(parseInt(etaUser));
 
+//leggo clicca scelta
+btnDOMElement.addEventListener('click', function () {
+    console.log("CLICK")
+    console.log('selDOMElement.value', selDOMElement.value)    
 
+// recupero dall'input il valore delláttributo value
+    const km = parseFloat(kmDOMElement.value)
+	console.log('km', km)
+})
+    
 // - calcolare il prezzo totale del viaggio
 //     - calcolare prezzo base (0.21 € al km)
 // - moltiplicare il prezzo al km per i km da percorrere
-let price 
-price = (parseFloat(0.21));  
+let price = (parseFloat(0.21));  
 let priceBase = km * price;    
-// console.(parseFloat(priceBase));
 let priceFinal
 priceFinal = priceBase;
 
@@ -55,4 +62,3 @@ let messageDomElement = document.getElementById('price');
 console.dir(messageDomElement);
 
 //- Modificare l'innerHTML dello span con il prezzo finale del biglietto 
-    
