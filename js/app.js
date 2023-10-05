@@ -3,22 +3,18 @@
 // - chiedo di inserire il nome e il cognome
 //     - seleziono l'elemento input tramite ID
 //     - recupero il valore presente nell'input e lo salvo in una variabile
-const btnDOMElement = document.getElementById('btn-calc');
-console.log(btnDOMElement);
 
 const inputDOMElement = document.getElementById('name');
-console.log(inputDOMElement);
-
-
-// - chiedo di inserire il numero di km da percorrere
-//     - seleziono l'elemento input tramite ID
-//     - recupero il valore presente nell'input e lo salvo in una variabile
 const kmDOMElement = document.getElementById('km');
 console.log(kmDOMElement);
 
-// - inserire l'età del passeggero
-//     - dichiara una variabile
-//     - assegnare alla variabile il valore restituito da un prompt
+const km = parseFloat(inputDOMElement.value);
+console.log(km);
+
+// prendo il pulsante dal DOM
+const btnDOMElement = document.getElementById('btn-calc');
+console.log(btnDOMElement);
+
 let etaUser;
 // etaUser = prompt('inserire età');
 // console.log(parseInt(etaUser));
@@ -29,14 +25,13 @@ let etaUser;
 // - moltiplicare il prezzo al km per i km da percorrere
 let price 
 price = (parseFloat(0.21));  
-let priceBase = numKm * price;    
+let priceBase = km * price;    
 // console.(parseFloat(priceBase));
 let priceFinal
 priceFinal = priceBase;
 
 // - Se l'utente è minorenne         
-//         - sottrarre il 20% dal prezzo base
-// SE l'utente è minorenne 
+//  - sottrarre il 20% dal prezzo base
 if (etaUser < 18) {
     let offUnder = (priceBase * (20 / 100));
     let priceUnder = (priceBase - offUnder);
@@ -60,4 +55,4 @@ let messageDomElement = document.getElementById('price');
 console.dir(messageDomElement);
 
 //- Modificare l'innerHTML dello span con il prezzo finale del biglietto 
-messageDomElement.innerHTML = priceFinal;
+    
